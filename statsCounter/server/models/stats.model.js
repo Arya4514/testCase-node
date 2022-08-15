@@ -9,11 +9,11 @@ module.exports = function (sequelize, DataTypes) {
             allowNull: false
         },
         views: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER(),
             allowNull: true
         },
         clicks: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER(),
             allowNull: true
         },
         cost: {

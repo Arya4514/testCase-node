@@ -2,9 +2,6 @@ const { Op } = require("sequelize")
 const sequelize = require("../models/sequelize")
 var db = require('../models/sequelize');
 
-
-
-
 module.exports = {
     statsList: async (req, res) => {
 
