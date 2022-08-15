@@ -31,5 +31,7 @@ to generate documents run below command
 npm run gendoc
 ```
 
+Added Dummy Data script in statsCounter it will execute only in dev environment
+
 
 

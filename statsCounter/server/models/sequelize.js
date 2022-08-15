@@ -1,5 +1,7 @@
 'use strict';
+const dotEnv = require("dotenv");
 const Sequelize = require('sequelize');
+const seedData = require('./dummyData');
 const { DATABASE, USERNAME, PASSWORD, HOST, DIALECT } = require('../config');
 
 /** 
@@ -47,6 +49,8 @@ db.stats = require('./stats.model')(sequelize, Sequelize);
 
 db.sequelize.sync({ force: false, alter: true }).then(() => {
     console.log("Drop and re-sync db.");
+    if (process.env.NODE_ENV == "dev")
+        seedData.initial()
 });
 
 module.exports = db;
