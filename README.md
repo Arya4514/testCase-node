@@ -1,13 +1,19 @@
 To start code follow below steps
 
-```
-npm install 
-```
-
-
 to start project in dev environment change .env.dev credentials.
+This are microservices so need to start both the services first start the statsCounter because it has demo data script binded with the db connection. 
 
+To start statsCounter service
 ```
+cd statsCounter
+npm install 
+npm run dev
+```
+
+To start stats service
+```
+cd stats
+npm install 
 npm run dev
 ```
 
@@ -30,8 +36,4 @@ to generate documents run below command
 ```
 npm run gendoc
 ```
-
-Added Dummy Data script in statsCounter it will execute only in dev environment
-
-
 
